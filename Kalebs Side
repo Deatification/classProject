@@ -1,8 +1,9 @@
 #Black Jack
 
-
+import itertools, random
 from random import randint
 coins = 100
+deck = list(itertools.product(range(1, 14),["Spade", "Heart", "Diamond", "Clubs"]))
 bet = 0
 corNum = False
 gameRun = True
@@ -15,6 +16,7 @@ while corNum == False:
             print("ERROR: INVALID NUMBER")
     except:
         print("ERROR: INVALID NUMBER")
+corNum = False
 while gameRun == True:
     while corNum == False:
         try:
@@ -26,3 +28,4 @@ while gameRun == True:
         except:
             print("ERROR: INVALID NUMBER")
     print(f"You Bet {bet}")
+    #gameRun == False
